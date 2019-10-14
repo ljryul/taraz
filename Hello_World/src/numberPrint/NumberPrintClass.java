@@ -40,7 +40,7 @@ public class NumberPrintClass {
 					temp = NumArr.arr[j];
 					NumArr.arr[j] = NumArr.arr[i];
 					NumArr.arr[i] = temp;
-				} else continue;
+				} //else continue;
 			}
 		}
 		System.out.println("오름차순 정렬 끝");
