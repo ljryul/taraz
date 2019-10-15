@@ -20,12 +20,6 @@ public class NumberPrintScan {
 		
 		System.out.println("입력된 숫자들");
 		
-		/*
-		for(int j : arr) {
-			System.out.println(j);
-		}
-		*/
-		
 		for(int j=0; j <10; j++) {
 			System.out.println(arr[j]);
 		}
