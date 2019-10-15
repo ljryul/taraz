@@ -40,5 +40,6 @@ public class UpAndDown {
 				System.out.println("정답은 " + randNum + "입니다.");
 			}
 		}
+		scan.close();
 	}
 }
