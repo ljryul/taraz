@@ -23,7 +23,7 @@ public class UpAndDown {
 		for (int gameCount = 0; gameCount < 10; gameCount++) {
 
 			//숫자 입력
-			System.out.println("숫자를 입력하세요.");
+			System.out.printf("%d번째 숫자를 입력하세요.%n",gameCount+1);
 			scanNum = scan.nextInt();
 			
 			//판정
@@ -37,7 +37,7 @@ public class UpAndDown {
 
 			//도전횟수 소진시
 			if (gameCount == 9) {
-				System.out.println("정답은 " + randNum + "입니다.");
+				System.out.printf("게임끝! %n정답은 " + randNum + "입니다.");
 			}
 		}
 		scan.close();
