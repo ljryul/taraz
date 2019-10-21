@@ -20,18 +20,19 @@ public class NumToBinary {
 			
 			try {
 				num = scan.nextInt();
+				
+				if(num == 0) {
+					scan.close();
+					break;
+				}
+				
+				NumToBin(num);
 			} catch (Exception e) {
 				System.out.println("정수를 입력하세요");
 				e.printStackTrace();
 				num = null;
 			}
 			
-			if(num == 0) {
-				scan.close();
-				break;
-			}
-			
-			NumToBin(num);
 		}
 	}
 
