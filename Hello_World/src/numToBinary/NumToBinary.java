@@ -11,19 +11,28 @@ public class NumToBinary {
 	public static void main(String[] args) {
 
 		Scanner scan = new Scanner(System.in);
-		int num;
+		Integer num = null;
 
-		System.out.println("이진법으로 바꿀 숫자를 입력하세요");
+		System.out.println("이진법으로 바꿀 숫자를 입력하세요.(0을 입력하면 종료됩니다)");
 
-		// 숫자만 입력받고 숫자가 아닐경우 Exception
-		try {
-			num = scan.nextInt();
+		while (true) {
+			// 숫자만 입력받고 숫자가 아닐경우 Exception
+			
+			try {
+				num = scan.nextInt();
+			} catch (Exception e) {
+				System.out.println("정수를 입력하세요");
+				e.printStackTrace();
+				num = null;
+			}
+			
+			if(num == 0) {
+				scan.close();
+				break;
+			}
+			
 			NumToBin(num);
-		} catch (Exception e) {
-			System.out.println("정수를 입력하세요");
-			e.printStackTrace();
 		}
-		scan.close();
 	}
 
 	private static void NumToBin(int num) {
@@ -36,7 +45,6 @@ public class NumToBinary {
 
 		//입력받은 숫자를 2진수로 변환(String타입)하여 String bin에 저장
 		String bin = Integer.toBinaryString(num);
-
 		System.out.println(bin);
 
 	}
