@@ -5,13 +5,15 @@ import java.util.Scanner;
 /*
  * Title : 배열에 10개의 숫자를 중복없이 입력받아 최댓값, 최솟값, 오름차순, 내림차순, 검색하기 
  * Author : ljryul
+ * Special Thanks : BumNyeong Kim
  */
 
 public class ArrayInput {
+	
+	static public Scanner scan;
 
 	public static void main(String[] args) {
 
-		Scanner scan = new Scanner(System.in);
 		int[] arryNum = new int[10];
 		int select;
 
@@ -79,12 +81,11 @@ public class ArrayInput {
 	}
 
 	private static void Search(int[] arryNum) {
-		Scanner scan2 = new Scanner(System.in);
 		int sNum;
 		int fNum = -1;
 		System.out.println("찾을 숫자를 입력하세요");
 		try {
-			sNum = scan2.nextInt();
+			sNum = scan.nextInt();
 			for (int i = 0; i < arryNum.length; i++) {
 				if (arryNum[i] == sNum) {
 					fNum = i;
@@ -99,7 +100,7 @@ public class ArrayInput {
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("숫자만 입력하세요");
-			scan2.next();
+			scan.next();
 		}
 	}
 
