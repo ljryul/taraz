@@ -69,6 +69,7 @@ public class ArrayInput {
 
 				if (select == 0) {
 					System.out.println("프로그램 종료");
+					scan.close();
 					break;
 				}
 
