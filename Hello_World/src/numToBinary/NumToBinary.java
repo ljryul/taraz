@@ -31,7 +31,7 @@ public class NumToBinary {
 				// 변환클래스 실행
 				NumToBin(num);
 
-				System.out.println("\n변환 완료, 새로운 숫자를 입력하세요.(0을 입력하면 종료합니다)");
+				System.out.println("\n변환 완료, 새로운 숫자를 입력하세요.(0을 입력하면 종료)");
 			} catch (Exception e) {
 				System.out.println("정수를 입력하세요");
 				scan.next();
@@ -46,7 +46,7 @@ public class NumToBinary {
 		String bin = Integer.toBinaryString(num);
 		System.out.println("2진수 : " + bin);
 
-		// StringBuffer에 32 - bin의 갯수만큼 0을 집어넣은 후 binNum 입력
+		// StringBuffer에 32 - bin의 갯수만큼 0을 집어넣은 후 bin 입력
 		StringBuffer sb = new StringBuffer();
 		for (int i = 0; i < 32 - bin.length(); i++) {
 			sb.append("0");
@@ -57,7 +57,7 @@ public class NumToBinary {
 		String[] initNum = sb.toString().split("");
 
 		// 결과물 출력
-		System.out.println("결과물 출력");
+		System.out.println("8바이트 형태");
 		
 		// 4자리마다 공백 추가
 		for (int i = 0; i < initNum.length; i++) {
