@@ -46,12 +46,9 @@ public class NumToBinary {
 		String bin = Integer.toBinaryString(num);
 		System.out.println("2진수 : " + bin);
 
-		// bin의 갯수 구함
-		int binCount = bin.length();
-
-		// StringBuffer에 32 - binCount 숫자만큼 0을 집어넣은 후 binNum 입력
+		// StringBuffer에 32 - bin의 갯수만큼 0을 집어넣은 후 binNum 입력
 		StringBuffer sb = new StringBuffer();
-		for (int i = 0; i < 32 - binCount; i++) {
+		for (int i = 0; i < 32 - bin.length(); i++) {
 			sb.append("0");
 		}
 		sb.append(bin);
