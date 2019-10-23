@@ -134,7 +134,7 @@ public class ArrayInput {
 				}
 			}
 		}
-		System.out.println("올림차순 정렬");
+		System.out.println("오름차순 정렬");
 		for (int i : arryNum) {
 			System.out.print(i + " ");
 		}
