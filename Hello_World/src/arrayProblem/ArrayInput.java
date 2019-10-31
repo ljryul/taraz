@@ -10,9 +10,11 @@ import java.util.Scanner;
 
 public class ArrayInput {
 	
-	static public Scanner scan;
+	static public Scanner scan = new Scanner(System.in);
 
 	public static void main(String[] args) {
+		
+		//Scanner scan = new Scanner(System.in);
 
 		int[] arryNum = new int[10];
 		int select;
@@ -82,6 +84,7 @@ public class ArrayInput {
 	}
 
 	private static void Search(int[] arryNum) {
+		//Scanner scan = new Scanner(System.in);
 		int sNum;
 		int fNum = -1;
 		System.out.println("찾을 숫자를 입력하세요");
