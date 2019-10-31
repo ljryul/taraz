@@ -1,5 +1,10 @@
 package magicSquare;
 
+/*
+ * Title : 5*5 ¸¶¹æÁø 
+ * Author : ljryul
+ */
+
 public class MagicSquare5_5 {
 
 	public static void main(String[] args) {
