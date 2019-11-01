@@ -64,17 +64,14 @@ public class ArrayInput {
 				case 5:
 					Search(arryNum);
 					break;
+				case 0:
+					System.out.println("프로그램 종료");
+					scan.close();
+					return;
 				default:
 					break;
 
 				}
-
-				if (select == 0) {
-					System.out.println("프로그램 종료");
-					scan.close();
-					break;
-				}
-
 			} catch (Exception e) {
 				e.printStackTrace();
 				System.out.println("숫자만 입력하세요");
