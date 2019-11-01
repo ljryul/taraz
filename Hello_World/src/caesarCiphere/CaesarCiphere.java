@@ -13,35 +13,41 @@ public class CaesarCiphere {
 
 	public static void main(String[] args) {
 
-		String str;
-		String task;
+		String str; // 입력받을 문구
+		String task; // 수행할 작업 번호
 
 		while (true) {
 			System.out.println("수행할 작업을 고르시오\n 1. 암호화 2. 복호화 0. 종료");
 			task = sc.nextLine();
+			
 			switch (task) {
+			
 			case "1":
 				System.out.println("암호화할 문구를 입력하시오");
 				str = sc.nextLine();
 				Enctyption(str);
 				break;
+			
 			case "2":
 				System.out.println("복호화할 문구를 입력하시오");
 				str = sc.nextLine();
 				Decryption(str);
 				break;
+			
 			case "0":
 				System.out.println("프로그램 종료");
 				sc.close();
 				return;
+			
 			default:
+				System.out.println("번호만 입력하세요");
 				break;
 			}
 		}
 	}
 
 	private static void Enctyption(String str) {
-		
+
 		char temp;
 		int count = 0;
 
@@ -54,7 +60,7 @@ public class CaesarCiphere {
 				count = ((int) temp - 122);
 				temp = (char) (96 + count);
 			} else if (temp > 90 && temp < 96) { // 대문자, X가 들어오면 A로 거슬러 올라감
-				count = ((int) temp - 90 );
+				count = ((int) temp - 90);
 				temp = (char) (64 + count);
 			}
 
@@ -80,7 +86,6 @@ public class CaesarCiphere {
 				count = (97 - (int) temp);
 				temp = (char) (123 - count);
 			}
-
 			System.out.print(temp);
 		}
 		System.out.println();
