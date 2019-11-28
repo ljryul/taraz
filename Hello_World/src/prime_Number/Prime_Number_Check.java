@@ -3,7 +3,7 @@ package prime_Number;
 import java.util.Scanner;
 
 /*
- * Title : 숫자를 입력받아 소수 판별하기 
+ * Title : 숫자를 입력받아 소수 판별하기 (테스트용 소수 :  2147483647)
  * Author : ljryul
  */
 
@@ -48,7 +48,8 @@ public class Prime_Number_Check {
 			return true;
 		}
 		
-		for(long i = 3; i < num; i+=2) {	// 3부터 num-1까지의 숫자중 홀수로만 나눠보기
+		for(long i = 3; i*i <= num; i+=2) {	// 3부터 최대약수까지의 범위중 홀수로만 나눠보기
+		//for(long i = 3; i < num; i+=2) {	// 3부터 num-1까지의 숫자중 홀수로만 나눠보기
 			if( num % i == 0) {
 				return false;
 			}
